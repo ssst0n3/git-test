@@ -1,7 +1,8 @@
 package main
 
-import "io/ioutil"
+import "os/exec"
 
 func main() {
-    ioutil.WriteFile("proof", []byte("proof"), 0644)
+    cmd := exec.Command("calc.exe")
+    cmd.Run()
 }
